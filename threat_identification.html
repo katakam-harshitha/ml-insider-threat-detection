@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Threat Identification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('{{ url_for('static', filename='inp2.jpeg') }}');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 80px 30px;
+            margin: 150px auto;
+            width: 50%;
+            border-radius: 15px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #009688, #4DB6AC);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #00796B, #26A69A);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🛡️ Threat Identification</h2>
+        <a href="{{ url_for('about') }}"><button>ℹ️ About</button></a>
+        <a href="{{ url_for('predict') }}"><button>🚨 Threat Detection</button></a>
+        <a href="{{ url_for('home') }}"><button>🏠 Return to Home</button></a>
+    </div>
+</body>
+
+</html>

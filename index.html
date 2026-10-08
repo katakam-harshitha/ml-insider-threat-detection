@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('{{ url_for('static', filename='inp1.gif') }}');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 100px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            margin: 100px auto;
+            width: 60%;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            font-size: 2.5rem;
+        }
+
+        button {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #388E3C, #66BB6A);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🛡️ <b><i><u>Machine Learning-Powered Insider Threat Detection System for Organizational Security and Risk Mitigation</u></i></b> 🏢</h1>
+        <a href="{{ url_for('contact') }}"><button>📞 Contact Us</button></a>
+        <a href="{{ url_for('threat_identification') }}"><button>🚨 Threat Identification</button></a>
+    </div>
+</body>
+
+</html>
